@@ -6,7 +6,7 @@ package BMSJAVA;
 public class Customer {
     private int customerID;
     private String firstName;
-    private  String secondName;
+    private String secondName;
     private String gender;
     private String username;
     private String password;

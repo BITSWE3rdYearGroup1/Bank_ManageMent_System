@@ -3,16 +3,20 @@
     Created on : Jun 13, 2023, 9:06:39 PM
     Author     : EZIRA SUTUAL
 --%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="BMSJAVA.StoreUser" %>
 <%@page import="BMSJAVA.TransferBean" %>
+<%@page import="BMSJAVA.Customer" %>
 <%@page import="java.sql.*" %>
-
+<jsp:useBean id="customer" class="BMSJAVA.Customer" scope="session" />
 <jsp:useBean id="transferBean" class="BMSJAVA.TransferBean" scope="session" />
 <jsp:useBean id="manageUserAccount" class="BMSJAVA.ManageUserAccount" scope="session" />
 <jsp:useBean id="storeUserObject" class="BMSJAVA.StoreUser" scope="session" />
 <jsp:setProperty name="transferBean" property="*" ></jsp:setProperty><!DOCTYPE html>
+<%
+    HttpSession sessions = request.getSession();
+    // Rest of your code...
+%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -82,7 +86,8 @@
                     MegaCash Bank
                 </h2>
                 <p class=" mx-auto" style="color: rgb(192, 191, 191);">
-                    Welcome to MegaCash Bank, where banking ain't no joke. We're talking top-notch security, convenience
+                    <% customer = (Customer) sessions.getAttribute("customer"); %>
+                    Welcome  <%= customer.getFirstName() %> to MegaCash Bank, where banking ain't no joke. We're talking top-notch security, convenience
                     like you've never seen.
                 </p>
 
@@ -108,6 +113,7 @@
                 <img class="img-fluid" src="assets/images/1.svg" />
             </div>
         </div>
+     
         <div id="transfer-wrapper" class="transfer-wrapper">
             <form action="transfer.jsp" class="form">
                 <h2>Transfer</h2>
@@ -117,6 +123,10 @@
                 </div>
                 <div class="input-group">
                     <input type="text" name="amount" id="amount" required>
+                    <label for="amount">Amount</label>
+                </div>
+                 <div class="input-group">
+                    <input type="hidden" name="source" id="amount"  value="<%= customer.getCustomerID() %>">
                     <label for="amount">Amount</label>
                 </div>
                 <button class="submit-btn">Send</button>
@@ -162,7 +172,7 @@
                         <th>Transaction ID</th>
                     </tr>
                     <!--....back end needed.....-->
-                <% ResultSet  result = manageUserAccount.getTransaction(3); %>
+                <% ResultSet  result = manageUserAccount.getTransaction(customer.getCustomerID()); %>
                 <% while(result.next()) { %>
                     <tr>
                         <td> <%= result.getString(2) %></td>
@@ -171,6 +181,7 @@
                         <td> <%= result.getString(5) %></td>
                         <td> <%= result.getString(6) %></td>
                         <td> <%= result.getString(1) %></td>
+                        <td> <%= result.getString(7) %></td>
                        
                     </tr>
                     <% } %>

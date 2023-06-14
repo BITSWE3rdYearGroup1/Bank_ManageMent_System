@@ -64,4 +64,10 @@ public class StoreUser {
         }
         return customer;
     }
+   public ResultSet getUsers() throws SQLException, ClassNotFoundException {
+        Database.initializeDatabase();
+        PreparedStatement preparedStatement = Database.connection.prepareStatement("select * from tbl_customer ");
+        ResultSet resultSet = preparedStatement.executeQuery();
+return resultSet;
+ }
 }

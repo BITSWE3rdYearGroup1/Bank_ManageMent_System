@@ -11,6 +11,7 @@
 <jsp:useBean id="loginObject" class="BMSJAVA.UserLogin" />
 <jsp:useBean id="teller" class="BMSJAVA.Teller" scope="session" />
 <jsp:useBean id="storeTellerObject" class="BMSJAVA.StoreTeller" scope="session" />
+<jsp:useBean id="storeUserObject" class="BMSJAVA.StoreUser" scope="session" />
 <jsp:setProperty name="teller" property="*" ></jsp:setProperty>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,7 +57,7 @@
                         </li>
 
                     </ul>
-                    <button onclick="window.location.href='html/index.html'" class="btn btn-success text-dark"
+                    <button onclick="window.location.href='index.html'" class="btn btn-success text-dark"
                         type="submit" id="abc">
                         Log out
                     </button>
@@ -189,20 +190,21 @@
                       <th>Teller ID</th>
                     </tr>
                      <!--....back end needed.....-->
+                     <% ResultSet userResult = storeUserObject.getUsers(); %>
+                    <% while (userResult.next()) { %>
                     <tr>
-                      <td>Elias</td>
-                      <td>Tadesse</td>
-                      <td>Male</td>
-                      <td>elias123</td>
-                      <td>********</td>
-                      <td>123456789</td>
-                      <td>$5000</td>
-                      <td>1234567890</td>
-                      <td>elias@example.com</td>
-                      <td>2023-06-10</td>
-                      <td><img src="assets/images/1.png" alt="User Photo" width="100" height="100"></td>
-                      <td>Teller 1</td>
+                    <td><%= userResult.getString("first_name") %></td>
+                    <td><%= userResult.getString("last_name") %></td>
+                    <td><%= userResult.getString("gender") %></td>
+                    <td><%= userResult.getString("user_name") %></td>
+                    <td><%= userResult.getString("password") %></td>
+                    <td><%= userResult.getString("account_number") %></td>
+                    <td><%= userResult.getString("balance") %></td>
+                    <td><%= userResult.getString("phone") %></td>
+                    <td><%= userResult.getString("email") %></td>
+                    <td><%= userResult.getString("registration_date") %></td>
                     </tr>
+                    <% } %>
                     
                      <!--....back end needed.....-->
                   </table>

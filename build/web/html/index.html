@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Virtual Bank Website</title>
+
+    <!-- Linking CSS File  -->
+    <link rel="stylesheet" href="../css/mainpageStyle.css" />
+
+    <!-- Bootstrap CSS  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+
+    <!-- Fontawesome Icons  -->
+    <script src="https://kit.fontawesome.com/7433d3320f.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../assets/images/bank.png" type="image/x-icon">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbarSupportedContent">
+    <header>
+        <!-- Navbar Section  -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">MegaCash</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#discover">Discover</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#service">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact Us</a>
+                        
+                    </ul>
+                    <button onclick="window.location.href='#login-wrapper'" class="btn btn-success text-dark"
+                        type="submit" id="abc">
+                        Sign In
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- sign in section  -->
+        <!--backend need to be done for this form-->
+
+        <div id="login-wrapper" class="login-wrapper">
+            <form action="" class="form">
+                <img src="../assets/images/avatar3.png" alt="">
+                <h2>Login</h2>
+                <div class="input-group">
+                    <input type="text" name="loginUser" id="loginUser" class="a" required>
+                    <label for="loginUser">User Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="loginPassword" id="loginPassword" required>
+                    <label for="loginPassword">Password</label>
+                </div>
+                <button id="submit-button" class="submit-btn">login</button>
+                <a href="#" class="close-button">&times;</a>
+            </form>
+
+
+        </div>
+
+
+
+        <!-- Hero Section  -->
+        <div class="mid">
+            <div class="hero text-center">
+
+                <h2 class=" display-4 fw-bold" style="color: #00bf7f;">
+                    MegaCash Bank
+                </h2>
+                <p class=" mx-auto" style="color: rgb(192, 191, 191);">
+                    Welcome to MegaCash Bank, where banking ain't no joke. We're talking top-notch security, convenience
+                    like you've never seen.
+                </p>
+                <a class="text-dark" href="#login-wrapper">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section  -->
+    <section id="about" class="about py-3">
+        <div class="row align-items-center container my-3 mx-auto">
+            <!-- Left Side Content Area  -->
+            <div class="text col-lg-6 col-md-6 col-12 pt-5 pb-5">
+                <h6>PREMIUM BANK</h6>
+                <h2>Unlimited Transaction with zero fees</h2>
+                <p>
+                    Unlock Financial Freedom: Seamlessly Conduct Unlimited Transactions with Zero Fees at Your
+                    Fingertips!
+                </p>
+                <a href="#login-wrapper">Learn More</a>
+            </div>
+            <!-- Right Side Image Area  -->
+            <div class="img col-lg-6 col-md-6 col-12 pt-5 pb-5">
+                <img class="img-fluid" src="../assets/images/1.svg" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Discover Section  -->
+    <section id="discover" class="discover py-3">
+        <div class="row align-items-center container my-3 mx-auto">
+            <!-- Left Side Content Area  -->
+            <div class="img col-lg-6 col-md-6 col-12 pt-5 pb-5">
+                <img class="img-fluid" src="../assets/images/2.png" />
+            </div>
+            <!-- Right Side Image Area  -->
+            <div class="text col-lg-6 col-md-6 col-12 pt-5 pb-5">
+                <h6>UNLIMITED ACCESS</h6>
+                <h2>Login to your account at any time</h2>
+                <p>
+                    24/7 Access: Login to Your Account Anytime, Anywhere and Take Control of Your Finances!"
+                </p>
+                <a href="#login-wrapper">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Section  -->
+    <section id="service" class="service py-2 pb-5">
+        <div class="col mx-auto align-items-center my-2">
+            <!-- Heading  -->
+            <div class="heading text-center pt-5">
+                <h2 class="fw-bolder pb-4 text-light">Our Service</h2>
+            </div>
+            <div class="row mx-auto justify-content-center align-items-center text-center container">
+                <!-- First Card  -->
+                <div class="card col-lg-3 col-md-3 col-12 m-2">
+                    <img class="img-fluid w-75" src="../assets/images/1.svg" />
+                    <h5 class="fw-bold pt-4">Reduce Expenses</h5>
+                    <p>
+                        Trimming the Fat: Empower Yourself to Reduce Expenses and Maximize Your Savings Potential.
+                    </p>
+                </div>
+                <!-- Second Card  -->
+                <div class="card col-lg-3 col-md-3 col-12 m-2">
+                    <img class="img-fluid w-75" src="../assets/images/2.png" />
+                    <h5 class="fw-bold pt-4">Virtual Offices</h5>
+                    <p>
+                        "Embrace the Future: Elevate Your Business with Virtual Offices for Seamless Collaboration and
+                        Enhanced Productivity!"
+                    </p>
+                </div>
+                <!-- Third Card  -->
+                <div class="card col-lg-3 col-md-3 col-12 m-2">
+                    <img class="img-fluid w-75" src="../assets/images/3.png" />
+                    <h5 class="fw-bold pt-4">Premium Benefits</h5>
+                    <p>
+                        Indulge in Excellence: Unlock a World of Premium Benefits and Elevate Your Lifestyle to
+                        Extraordinary Heights!
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sign Up Section  -->
+    <section id="signup" class="signup py-3">
+        <div class="row align-items-center container my-3 mx-auto">
+            <!-- Left Side Content Area  -->
+            <div class="text col-lg-6 col-md-6 col-12 pt-5 pb-5">
+                <h6>JOIN OUR TEAM</h6>
+                <h2>Creating an account is extremely easy</h2>
+                <p>
+                    Come and create account to your nearest branch and enjoy the benefits of our bank.
+                </p>
+            </div>
+            <!-- Right Side Image Area  -->
+            <div class="img col-lg-6 col-md-6 col-12 pt-5 pb-5">
+                <img class="img-fluid" src="../assets/images/4.png" />
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Section  -->
+    <footer id="contact" class="bg-dark text-center text-white" style="height: 100px;">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-twitter"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-instagram"></i></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+        <script src="../js/script.js"></script>
+</body>
+
+</html>

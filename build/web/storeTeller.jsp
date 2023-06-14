@@ -24,7 +24,7 @@
     </head>
     <body>
     <% if  ( storeTellerObject.addTeller(teller) ) { %>
-    <jsp:forward page="admin.html" />
+    <jsp:forward page="admin.jsp" />
     <% }%>
   
     </body>

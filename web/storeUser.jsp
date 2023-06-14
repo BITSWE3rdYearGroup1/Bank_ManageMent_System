@@ -19,7 +19,7 @@
     </head>
     <body>
     <% if  ( storeUserObject.addUser(customer) ) { %>
-    <jsp:forward page="admin.html" />
+    <jsp:forward page="admin.jsp" />
     <% }%>
   
     </body>

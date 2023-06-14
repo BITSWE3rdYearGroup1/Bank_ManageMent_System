@@ -17,8 +17,13 @@
         <title>JSP Page</title>
     </head>
     <body>
+        
     <% if( manageUserAccount.transferMoney(transferBean)) { %>
     <script>alert("send succefully" );</script>
+        <jsp:forward page="user.jsp" />
+
+    <% } else { %>
+    <script>alert(" <%= transferBean.getSource() %>Not send succefully" );</script>
     <% } %>
     </body>
 </html>

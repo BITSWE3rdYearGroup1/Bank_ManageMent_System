@@ -6,6 +6,15 @@ package BMSJAVA;
 public class TransferBean {
     private String destination;
     private double amount ;
+    private String source;
+
+    public String getSource() {
+        return source;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
+    }
    public TransferBean(){
 
     }

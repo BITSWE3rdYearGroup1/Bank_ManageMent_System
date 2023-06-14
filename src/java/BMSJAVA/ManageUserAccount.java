@@ -30,11 +30,11 @@ public  double seeBalance(String accountNumber) throws SQLException, ClassNotFou
                         preparedStatement1.setDouble(1, bean.getAmount());
                         preparedStatement1.setString(2, bean.getDestination());
                         preparedStatement1.setInt(3,1);
-                        preparedStatement1.setInt(4,3);
+                        preparedStatement1.setInt(4,Integer.parseInt(bean.getSource()));
                         preparedStatement1.registerOutParameter(5, Types.BOOLEAN);
                         preparedStatement1.executeUpdate();
-                        boolean bool = preparedStatement1.getBoolean("@make");
-                        return !bool;
+                        boolean bool = preparedStatement1.getBoolean("make");
+                        return bool;
     }
        public ResultSet getTransaction(int customer_ID) throws SQLException, ClassNotFoundException {
         Database.initializeDatabase();

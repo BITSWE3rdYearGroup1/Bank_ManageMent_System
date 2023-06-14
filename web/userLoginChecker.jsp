@@ -22,6 +22,7 @@
     </head>
     <body>
     <% customer = StoreUser.validateUser(loginObject); %>
+    <%     session.setAttribute("customer", customer ); %>
     <% if (customer.getUsername() != null) { %>
     <jsp:forward page="user.jsp" />
     <script>
