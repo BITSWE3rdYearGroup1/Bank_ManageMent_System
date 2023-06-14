@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Virtual Bank Website</title>
+    <title>MegaCash</title>
 
     <!-- Linking CSS File  -->
     <link rel="stylesheet" href="css/mainpageStyle.css" />
@@ -180,33 +180,39 @@
     </section>
 
     <!-- Balance Section  -->
-    <section id="balchk" class="service py-2 pb-5">
-        <div class="col mx-auto align-items-center my-2">
-            <!-- Heading  -->
-            <div class="heading text-center pt-5">
-                <h2 class="fw-bolder pb-4 text-light">Your Account</h2>
+    <section id="balchk" class="about py-3">
+        <div class="row align-items-center container my-3 mx-auto">
+            <!-- Left Side Content Area  -->
+            <div class="text col-lg-6 col-md-6 col-12 pt-5 pb-5">
+                <h6>Account Balance</h6>
+               
+                <p>
+                    Every thing is on set, you can now check your account balance! </p>
+                </p>
+                <a href="#Balance">CHECK NOW</a>
             </div>
-            <div class="row mx-auto justify-content-center align-items-center text-center container">
-                <!-- back end nedded here replace the images and other extras like name-->
-                <div class="card col-lg-3 col-md-3 col-12 m-2">
-                    <img class="img-fluid w-75" src="assets/images/2.png" />
-                    <!--this shouldbe the image of the owner -->
-                    <h5 class="fw-bold pt-4">name of the owner </h5> <!--this shouldbe the name of the owner -->
-                    <p>
-                        Account Number :
-                    </p>
-                    <p>
-                        1000930000
-                    </p>
-                    <p>
-                        Account Balance :
-                    </p>
-                    <p>
-                        100000000
-                    </p>
+            <!-- Right Side Image Area  -->
+            <div class="img col-lg-6 col-md-6 col-12 pt-5 pb-5">
+                <img class="img-fluid" src="assets/images/3-.png" />
+            </div>
+        </div>
+        <div id="Balance" class="Balance">
+            <form action="transfer.jsp" class="form">
+                <h2>Your Account Balance</h2>
+                    <label for="loginUser">Name:</label>
+                    <p>Kebede Chebse</p>
+                    <label for="loginUser">Account Number</label>
+                    <p>10000</p>
+                    <label for="loginUser">Balance</label>
+                    <p>$10,000</p>
+                    <button class="ok" onclick="window.location.href='#'">OK</button>
+                <a href="#" class="close-button">&times;</a>
                 </div>
+                
+                
+            </form>
 
-            </div>
+
         </div>
     </section>
     <!-- Footer Section  -->

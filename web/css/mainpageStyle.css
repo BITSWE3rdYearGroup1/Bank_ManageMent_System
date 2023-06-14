@@ -14,6 +14,21 @@
     cursor: pointer;
 
 }
+.Balance{
+    height:auto;
+    width: 45vw;
+    display: none;
+    z-index: 9999;
+    position: absolute;
+
+}
+.Balance:target {
+    display: flex;
+    margin-top: -500px;
+    margin-left: 170px;
+}
+ 
+  
 .account-info {
     visibility: hidden;
     position: absolute;
